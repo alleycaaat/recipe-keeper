@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: 'Annie Use Your Telescope', cursive;
+  font-family: "Annie Use Your Telescope", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,7 +59,7 @@ p {
   margin-top: 20px;
   width: auto;
   padding: 7px;
-  border: 1px solid #342FA8;
+  border: 1px solid #342fa8;
   -webkit-box-shadow: 5px 5px 5px 0px #888;
           box-shadow: 5px 5px 5px 0px #888;
   background-color: rgba(100, 100, 100, 0.5);
@@ -69,7 +69,7 @@ p {
 .credit p {
   color: #000;
   text-align: center;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 19px;
 }
 
@@ -80,7 +80,7 @@ p {
 .credit a {
   cursor: pointer;
   text-decoration: none;
-  color: #342FA8;
+  color: #342fa8;
   padding: 1px 2px;
   border-radius: 3px;
 }
@@ -103,7 +103,7 @@ p {
 }
 
 .tabs .tab {
-  color: #342FA8;
+  color: #342fa8;
   width: 33%;
   height: auto;
   padding: 5px;
@@ -143,7 +143,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   text-transform: uppercase;
-  font-family: 'Annie Use Your Telescope', cursive;
+  font-family: "Annie Use Your Telescope", cursive;
   font-size: 24px;
   border: 0;
   border-radius: 5px;
@@ -153,8 +153,8 @@ p {
 
 .buttons:hover {
   text-decoration: underline;
-  -webkit-text-decoration-color: #342FA8;
-          text-decoration-color: #342FA8;
+  -webkit-text-decoration-color: #342fa8;
+          text-decoration-color: #342fa8;
 }
 
 .submit {
@@ -174,8 +174,8 @@ p {
 
 .x:hover {
   text-decoration: underline;
-  -webkit-text-decoration-color: #342FA8;
-          text-decoration-color: #342FA8;
+  -webkit-text-decoration-color: #342fa8;
+          text-decoration-color: #342fa8;
 }
 
 .entrylist {
@@ -200,8 +200,8 @@ p {
 
 .entrylist .span a:hover {
   text-decoration: underline;
-  -webkit-text-decoration-color: #342FA8;
-          text-decoration-color: #342FA8;
+  -webkit-text-decoration-color: #342fa8;
+          text-decoration-color: #342fa8;
 }
 
 .ddown {
@@ -224,25 +224,25 @@ p {
   margin: -4px 0 0 0;
   border: 0;
   margin-left: 7px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 17px;
   cursor: pointer;
 }
 
 .ddown select:hover {
   text-decoration: underline;
-  -webkit-text-decoration-color: #342FA8;
-          text-decoration-color: #342FA8;
+  -webkit-text-decoration-color: #342fa8;
+          text-decoration-color: #342fa8;
 }
 
 .ddown select:active {
-  border: solid #342FA8;
+  border: solid #342fa8;
   border-bottom: 1px;
 }
 
 .ddown .viewall {
   text-transform: uppercase;
-  font-family: 'Annie Use Your Telescope', cursive;
+  font-family: "Annie Use Your Telescope", cursive;
   font-size: 24px;
   border: 0;
   margin-left: 15px;
@@ -253,8 +253,8 @@ p {
 
 .ddown .viewall:hover {
   text-decoration: underline;
-  -webkit-text-decoration-color: #342FA8;
-          text-decoration-color: #342FA8;
+  -webkit-text-decoration-color: #342fa8;
+          text-decoration-color: #342fa8;
 }
 
 input {
@@ -269,13 +269,13 @@ input {
   letter-spacing: 1px;
   word-spacing: 3px;
   cursor: pointer;
-  font-family: 'Annie Use Your Telescope', cursive;
+  font-family: "Annie Use Your Telescope", cursive;
 }
 
 input:hover {
   text-decoration: underline;
-  -webkit-text-decoration-color: #342FA8;
-          text-decoration-color: #342FA8;
+  -webkit-text-decoration-color: #342fa8;
+          text-decoration-color: #342fa8;
 }
 
 .input {
@@ -353,7 +353,7 @@ input:hover {
 }
 
 .header::before {
-  content: '';
+  content: "";
   position: absolute;
   border-bottom: solid rgba(255, 0, 0, 0.6);
   width: 100%;
