@@ -24,7 +24,6 @@ const New = ({ updateentry, updatecats }) => {
         if (input.cat === '') {
             input.cat = 'uncategorized';
         }
-        console.log(input.cat);
         updateentry(input);
         updatecats(input.cat);
     };
