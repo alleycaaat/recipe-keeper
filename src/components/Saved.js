@@ -2,72 +2,67 @@ import React, { useState } from 'react';
 import '../style.css';
 import { GoTrashcan } from 'react-icons/go';
 
-const Saved = ({ list, cat, handlecats, handleremove }) => {
+const Saved = ({ list, cat, catList, handlerem, setLoading }) => {
     const [results, setResults] = useState([...list]);
-    const [search, setSearch] = useState();
+    const [searchterm, setSearchterm] = useState();
     const [disp, setDisp] = useState([]);
-    const [cats, setCats] = useState([...cat]);
 
     const handleSearch = (e) => {
         let sea = e.target.value;
-        setSearch(sea);
+        setSearchterm(sea);
         if (sea === cat[0]) {
             setDisp([]);
         } else if (sea === cat[1]) {
-            setDisp(results);
+            setDisp(list);
         } else {
             const filt = results.filter((title) => {
-                return title.cat.includes(sea);
+                return title.data.cat.includes(sea);
             });
-            setSearch(sea);
+            setSearchterm(sea);
             setDisp(filt);
         }
     };
 
     const viewAll = () => {
-        setDisp(results);
-        setSearch('view all');
+        setDisp(list);
+        setSearchterm('view all');
     };
 
-    const remove = (idx, kitty, title) => {
+    const remove = (card, idx, kitty) => {
+        setLoading(true);
         const newList = [...list];
         const newCats = [...cat];
-        var searchTerm = [search];
         var catIdx = cat.indexOf(kitty); //get index of category from category array
-        let index = list.findIndex((o) => o.name === title); //get index of recipe name from entries array
-        let results = newList.filter((o) => {
-            //returns list of items in category
-            return o.cat.includes(kitty);
+        let results = newList.filter((itm) => {
+            return itm.data.cat.includes(kitty);
         });
+
         //if viewing all recipes, remove selected item
-        if (searchTerm === 'view all') {
+        if (searchterm === 'view all') {
             newList.splice(idx, 1);
             setDisp(newList);
-            setResults(newList);
-            handleremove(newList);
+
             //if it's the only item in its category, remove the category from the list
             if (results.length <= 1) {
                 newCats.splice(catIdx, 1);
-                setCats(newCats);
-                handlecats(newCats);
+                catList(newCats);
+                let zero = newCats[0];
+                setSearchterm(zero);
             }
-            //if looking at a category, remove selected item
+
         } else {
-            newList.splice(index, 1);
             results.splice(idx, 1);
-            setResults(newList);
-            handleremove(newList);
+
             //if it's the only item in its category, remove the category from the list
-            if (results.length < 1) {
+            if (results.length === 0) {
                 newCats.splice(catIdx, 1);
                 setDisp([]);
-                setCats(newCats);
-                handlecats(newCats);
-                //otherwise just update the display
+                catList(newCats);
             } else {
                 setDisp(results);
             }
         }
+        handlerem(card);
     };
 
     return (
@@ -85,13 +80,13 @@ const Saved = ({ list, cat, handlecats, handleremove }) => {
                         id='categories'
                         onChange={handleSearch}
                     >
-                        {cats.map((kitten, index) => (
+                        {cat.map((kitten, index) => (
                             <option
                                 index={index}
                                 category={kitten}
                                 value={kitten}
                             >
-                                {search === 'select a category'
+                                {searchterm === 'select a category'
                                     ? 'select a category'
                                     : kitten}
                             </option>
@@ -103,19 +98,25 @@ const Saved = ({ list, cat, handlecats, handleremove }) => {
                 </div>
                 <div className='entrylist'>
                     {disp.map((title, index) => (
-                        <span className='span'>
+                        <span className='span' key={index}>
                             <a
-                                href={title.link}
-                                value={title.name}
+                                href={title.data.link}
+                                value={title.data.name}
                                 index={index}
-                                category={title.cat}
+                                category={title.data.cat}
+                                id={title.key}
                             >
-                                {title.name}
+                                {title.data.name}
                             </a>
                             <button
                                 id='close'
                                 onClick={() => {
-                                    remove(index, title.cat, title.name);
+                                    remove(
+                                        title,
+                                        index,
+                                        title.data.cat,
+                                        title.data.name
+                                    );
                                 }}
                                 className='x'
                             >

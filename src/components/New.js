@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import '../style.css';
-import { GoPencil } from 'react-icons/go'
+import { GoPencil } from 'react-icons/go';
 
-const New = ({ updateentry, updatecats }) => {
+const New = ({ setLoading, addRec }) => {
     const [input, setInput] = useState({
         link: '',
         name: '',
@@ -12,6 +12,11 @@ const New = ({ updateentry, updatecats }) => {
     const { link, name, cat } = input;
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (input.cat === '') {
+            input.cat = 'uncategorized';
+        }
+        setLoading(true);
+        addRec(input);
         setInput({
             link: '',
             name: '',
@@ -19,18 +24,10 @@ const New = ({ updateentry, updatecats }) => {
         });
     };
 
-    const submit = () => {
-        input.cat = input.cat.toLowerCase();
-        if (input.cat === '') {
-            input.cat = 'uncategorized';
-        }
-        updateentry(input);
-        updatecats(input.cat);
-    };
-
     const handleChange = (e) => {
         const { name, value } = e.currentTarget;
         setInput({ ...input, [name]: value });
+        //41:00 https://www.youtube.com/watch?v=8KB3DHI-QbM
     };
 
     return (
@@ -76,7 +73,7 @@ const New = ({ updateentry, updatecats }) => {
                     </div>
                     <button
                         type='submit'
-                        onClick={submit}
+                        onClick={handleSubmit}
                         className='buttons submit'
                     >
                         Save to Recipe Box
