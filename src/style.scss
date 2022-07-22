@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
-$box-shadow: 5px 5px 5px 0px #888;
+$box-shadow: 5px 5px 5px 0px rgb(144, 144, 144);
 $invisible: rgba(0, 0, 0, 0);
 $blue: #342fa8;
 @mixin hover {
@@ -22,7 +22,7 @@ body {
     min-height: 100%;
     justify-content: center;
     align-content: center;
-    background-color: lightBlue;
+    background-color: rgba(159, 94, 182, 0.7);
 }
 p {
     margin: 2px;
@@ -52,9 +52,9 @@ p {
     margin-top: 20px;
     width: auto;
     padding: 7px;
-    border: 1px solid $blue;
+    border: 2px solid #732091;
     box-shadow: $box-shadow;
-    background-color: rgba(100, 100, 100, 0.5);
+    background-color: rgba(100, 100, 100, 0.3);
     border-radius: 3px;
     p {
         color: #000;
@@ -84,11 +84,13 @@ p {
     margin-top: 5%;
     .tab {
         color: $blue;
+        font-size: 18px;
         width: 33%;
         height: auto;
-        padding: 5px;
+        padding: 7px 5px;
         margin: 0 4px 0 0;
         text-transform: uppercase;
+        border: none;
         border-radius: 5px 5px 0 0;
         cursor: pointer;
     }

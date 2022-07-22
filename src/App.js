@@ -14,6 +14,7 @@ const App = () => {
 
     const startUp = () => {
         api.readall().then((recipes) => {
+            //initialize categories array with two values
             let catList = ['select a category', 'view all'];
             recipes.map((kitty) => {
                 if (!catList.includes(kitty.data.cat)) {
@@ -24,6 +25,7 @@ const App = () => {
 
             let newList = [];
             recipes.map((rec) => {
+                //map the recipes to get the id given by fauna
                 const key = getId(rec);
                 newList.push({
                     data: {
@@ -37,6 +39,7 @@ const App = () => {
             });
             setCats(catList);
             setEntry(newList);
+            //end the loading screen
             setLoading(false);
         });
     };
@@ -45,6 +48,7 @@ const App = () => {
         startUp();
     }, []);
 
+    //handles the categories state
     const listCats = (kitty) => {
         let newcats = [];
         if (!cats.includes(kitty.data.cat)) {
@@ -54,6 +58,7 @@ const App = () => {
     };
 
     const handlerem = async (title) => {
+        //get the id from the recipe
         let id = title.data.id;
 
         await api
@@ -146,7 +151,7 @@ const App = () => {
                     </p>
                     <p>
                         <a
-                            href='https://github.com/alleycaaat/recipe-keeper'
+                            href='https://github.com/alleycaaat/recipe-keeper-web-app'
                             target='_blank'
                             rel='noopener noreferrer'
                         >

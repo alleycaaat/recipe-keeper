@@ -3,13 +3,9 @@ import './loading.css';
 
 export default function Loading() {
     return (
-        <div className='overlaySpinner'>
-            <div className='sk-folding-cube'>
-                <div className='sk-cube1 sk-cube' />
-                <div className='sk-cube2 sk-cube' />
-                <div className='sk-cube4 sk-cube' />
-                <div className='sk-cube3 sk-cube' />
-            </div>
+        <div id='wrapper'>
+            <div id='loading-text'>LOADING</div>
+            <div id='loading-content'></div>
         </div>
     );
 }

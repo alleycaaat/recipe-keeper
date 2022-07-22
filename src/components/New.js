@@ -10,8 +10,11 @@ const New = ({ setLoading, addRec }) => {
         cat: '',
     });
     const { link, name, cat } = input;
+
+    //submit button
     const handleSubmit = (e) => {
         e.preventDefault();
+        //if no category given, mark it uncategorized
         if (input.cat === '') {
             input.cat = 'uncategorized';
         }
@@ -27,7 +30,6 @@ const New = ({ setLoading, addRec }) => {
     const handleChange = (e) => {
         const { name, value } = e.currentTarget;
         setInput({ ...input, [name]: value });
-        //41:00 https://www.youtube.com/watch?v=8KB3DHI-QbM
     };
 
     return (

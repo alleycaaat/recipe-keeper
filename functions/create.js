@@ -4,7 +4,8 @@ const q = faunadb.query;
 
 exports.handler = async (event, context, callback) => {
     const client = new faunadb.Client({
-        secret: process.env.FAUNADB_SECRET,
+        //secret is read-only persmissions
+        secret: 'fnAEsHXFfPAARe0IxmQDkllfjhogb5rqLZ316s1h',
         domain: 'db.us.fauna.com',
         port: 443,
         scheme: 'https',

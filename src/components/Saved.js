@@ -7,6 +7,7 @@ const Saved = ({ list, cat, catList, handlerem, setLoading }) => {
     const [searchterm, setSearchterm] = useState();
     const [disp, setDisp] = useState([]);
 
+    //update searchterm state
     const handleSearch = (e) => {
         let sea = e.target.value;
         setSearchterm(sea);
@@ -23,11 +24,13 @@ const Saved = ({ list, cat, catList, handlerem, setLoading }) => {
         }
     };
 
+    //view all button
     const viewAll = () => {
         setDisp(list);
         setSearchterm('view all');
     };
 
+    //remove button
     const remove = (card, idx, kitty) => {
         setLoading(true);
         const newList = [...list];
@@ -41,18 +44,16 @@ const Saved = ({ list, cat, catList, handlerem, setLoading }) => {
         if (searchterm === 'view all') {
             newList.splice(idx, 1);
             setDisp(newList);
-
             //if it's the only item in its category, remove the category from the list
             if (results.length <= 1) {
                 newCats.splice(catIdx, 1);
+                //send cats list to parent
                 catList(newCats);
                 let zero = newCats[0];
                 setSearchterm(zero);
             }
-
         } else {
             results.splice(idx, 1);
-
             //if it's the only item in its category, remove the category from the list
             if (results.length === 0) {
                 newCats.splice(catIdx, 1);
@@ -62,6 +63,7 @@ const Saved = ({ list, cat, catList, handlerem, setLoading }) => {
                 setDisp(results);
             }
         }
+        //send the recipe to the function that'll make the api call
         handlerem(card);
     };
 
@@ -119,6 +121,7 @@ const Saved = ({ list, cat, catList, handlerem, setLoading }) => {
                                     );
                                 }}
                                 className='x'
+                                alt='trashcan icon to delete an entry'
                             >
                                 <GoTrashcan className='icon trash' />
                             </button>

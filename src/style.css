@@ -20,7 +20,7 @@ body {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  background-color: lightBlue;
+  background-color: rgba(159, 94, 182, 0.7);
 }
 
 p {
@@ -47,8 +47,8 @@ p {
   margin: 0 auto 20px auto;
   padding-bottom: 10px;
   background-color: white;
-  -webkit-box-shadow: 5px 5px 5px 0px #888;
-          box-shadow: 5px 5px 5px 0px #888;
+  -webkit-box-shadow: 5px 5px 5px 0px #909090;
+          box-shadow: 5px 5px 5px 0px #909090;
 }
 
 .credit {
@@ -59,10 +59,10 @@ p {
   margin-top: 20px;
   width: auto;
   padding: 7px;
-  border: 1px solid #342fa8;
-  -webkit-box-shadow: 5px 5px 5px 0px #888;
-          box-shadow: 5px 5px 5px 0px #888;
-  background-color: rgba(100, 100, 100, 0.5);
+  border: 2px solid #732091;
+  -webkit-box-shadow: 5px 5px 5px 0px #909090;
+          box-shadow: 5px 5px 5px 0px #909090;
+  background-color: rgba(100, 100, 100, 0.3);
   border-radius: 3px;
 }
 
@@ -104,11 +104,13 @@ p {
 
 .tabs .tab {
   color: #342fa8;
+  font-size: 18px;
   width: 33%;
   height: auto;
-  padding: 5px;
+  padding: 7px 5px;
   margin: 0 4px 0 0;
   text-transform: uppercase;
+  border: none;
   border-radius: 5px 5px 0 0;
   cursor: pointer;
 }
@@ -335,8 +337,8 @@ input:hover {
   margin: 0 auto 20px auto;
   padding-top: 10px;
   padding-bottom: 10px;
-  -webkit-box-shadow: 5px 5px 5px 0px #888;
-          box-shadow: 5px 5px 5px 0px #888;
+  -webkit-box-shadow: 5px 5px 5px 0px #909090;
+          box-shadow: 5px 5px 5px 0px #909090;
 }
 
 .header {

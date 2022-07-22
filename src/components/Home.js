@@ -10,14 +10,15 @@ const Home = () => {
             </div>
             <div className='blue'>
                 <p className='welcome'>
-                    Welcome to Recipe Keeper! I developed this project because I
+                    Welcome to Recipe Keeper! I developed this web-app because I
                     wanted a better option for saving recipes, as previously I
                     was just pasting links into a note on my phone. It was the
-                    perfect excuse to work on my programming, so recipe-keeper
-                    was born.
+                    perfect excuse to work on my programming and learn new
+                    skills, and so, Recipe Keeper was born.
                     <br />
                     <br />
-                    Recipe-keeper utilizes React, hooks and SCSS.
+                    Recipe Keeper was created using ReactJS, the useState and
+                    useEffect hooks, HTML and SCSS.
                 </p>
             </div>
         </div>

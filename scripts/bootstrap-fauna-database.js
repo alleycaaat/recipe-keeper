@@ -1,3 +1,5 @@
+//gonna be completely honest, idk what this does, but I'm pretty sure I needed it to get my app to talk to fauna.  I got it from here: https://github.com/netlify/netlify-faunadb-example
+
 /* bootstrap database in your FaunaDB account */
 const readline = require('readline');
 const faunadb = require('faunadb');
