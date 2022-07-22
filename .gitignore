@@ -24,3 +24,5 @@ yarn-error.log*
 
 .env
 apitest.http
+# Local Netlify folder
+.netlify
