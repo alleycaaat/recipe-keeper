@@ -23,8 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .env
-apitest.http
+
 # Local Netlify folder
 .netlify
-
-functions/edit.js
