@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Annie Use Your Telescope", cursive;
+  display: flex;
+  color: #444444;
+  min-height: 100%;
+  justify-content: center;
+  align-content: center;
+  background-color: rgba(159, 94, 182, 0.7);
+}
+
+p {
+  margin: 2px;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+.welcome {
+  line-height: 25px;
+  padding: 0 5px;
+  padding-top: 5px;
+  font-size: 21px;
+}
+
+.notepad {
+  width: 55vw;
+  min-width: 300px;
+  font-size: 18px;
+  margin-top: -2px;
+  position: relative;
+  margin: 0 auto 20px auto;
+  padding-bottom: 10px;
+  background-color: white;
+  box-shadow: 5px 5px 5px 0px #888;
+}
+
+.credit {
+  flex-direction: column;
+  margin-top: 20px;
+  width: auto;
+  padding: 7px;
+  border: 1px solid #342FA8;
+  box-shadow: 5px 5px 5px 0px #888;
+  background-color: rgba(245, 245, 245, 0.3);
+  border-radius: 3px;
+}
+.credit p {
+  color: #000;
+  text-align: center;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 21px;
+}
+.credit .smol {
+  font-size: 13px;
+}
+.credit a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #342FA8;
+  padding: 1px 2px;
+  border-radius: 3px;
+}
+.credit a:hover {
+  text-decoration: underline;
+}
+
+.tabs {
+  width: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+}
+.tabs .tab {
+  color: #342FA8;
+  width: 33%;
+  height: auto;
+  padding: 5px;
+  margin: 0 4px 0 0;
+  text-transform: uppercase;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+}
+
+.inactive {
+  background-color: lightGrey;
+  border: none;
+  border-bottom: 1px solid lightGrey;
+}
+
+.active {
+  border: 0;
+  background-color: white;
+}
+
+.editor {
+  height: 100%;
+  overflow-y: auto;
+}
+.editor .saved,
+.editor .default,
+.editor .new {
+  font-size: 16px;
+  padding: 5px 0;
+  margin-top: 0;
+}
+
+.buttons {
+  padding: 0 5px;
+  display: flex;
+  text-transform: uppercase;
+  font-family: "Annie Use Your Telescope", cursive;
+  font-size: 24px;
+  border: 0;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.buttons:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #342FA8;
+          text-decoration-color: #342FA8;
+}
+
+.submit {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.x {
+  display: inline;
+  margin-left: auto;
+  background: rgba(0, 0, 0, 0);
+  border: 0;
+  height: 23px;
+  cursor: pointer;
+}
+.x:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #342FA8;
+          text-decoration-color: #342FA8;
+}
+
+.entrylist {
+  margin-top: 6px;
+  padding: 0 5px;
+}
+.entrylist .span {
+  display: flex;
+  height: 24px;
+  line-height: 25px;
+  margin-top: 1px;
+}
+.entrylist .span a {
+  color: black;
+  text-decoration: none;
+  font-size: 21px;
+}
+.entrylist .span a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #342FA8;
+          text-decoration-color: #342FA8;
+}
+
+.ddown {
+  display: flex;
+  flex-direction: row;
+  height: 24px;
+}
+.ddown #categories {
+  margin-top: 0px;
+}
+.ddown select {
+  width: auto;
+  margin: -4px 0 0 0;
+  border: 0;
+  margin-left: 7px;
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  cursor: pointer;
+}
+.ddown select:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #342FA8;
+          text-decoration-color: #342FA8;
+}
+.ddown select:active {
+  border: solid #342FA8;
+  border-bottom: 1px;
+}
+.ddown .viewall {
+  text-transform: uppercase;
+  font-family: "Annie Use Your Telescope", cursive;
+  font-size: 24px;
+  border: 0;
+  margin-left: 15px;
+  margin-top: -8px;
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.ddown .viewall:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #342FA8;
+          text-decoration-color: #342FA8;
+}
+
+input {
+  border: 0;
+  margin: 0 0 0 5px;
+  padding-left: 5px;
+  font-size: 19px;
+  line-height: 25px;
+  background: rgba(0, 0, 0, 0);
+  display: block;
+  font-weight: 600;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  cursor: pointer;
+  font-family: "Annie Use Your Telescope", cursive;
+}
+input:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #342FA8;
+          text-decoration-color: #342FA8;
+}
+
+.input {
+  padding-top: 6px;
+}
+
+::-moz-placeholder {
+  color: #444;
+}
+
+:-ms-input-placeholder {
+  color: #444;
+}
+
+::placeholder {
+  color: #444;
+}
+
+.ins {
+  line-height: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  display: inline;
+  height: 21px;
+  background: rgba(0, 0, 0, 0);
+  border: 0;
+  padding: 1px;
+}
+.icon.trash {
+  margin-top: -1px;
+  height: 22px;
+  padding: 1px;
+  cursor: pointer;
+}
+.icon.trash:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+.paper {
+  position: relative;
+  height: 100%;
+  margin: 0 auto 20px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 5px 5px 5px 0px #888;
+}
+
+.header {
+  width: 100%;
+  left: 0;
+  top: -10px;
+  margin-bottom: -10px;
+  position: relative;
+}
+.header h1 {
+  padding: 8px 0 0 8px;
+  font-size: 38px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  border-bottom: solid rgba(255, 0, 0, 0.6);
+  width: 100%;
+  top: 43px;
+  height: 4px;
+}
+
+.blue {
+  min-height: 30vh;
+  background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+  padding-bottom: 10px;
+}/*# sourceMappingURL=style.css.map */
